@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+    
     getWord = (word) => {
         var searchKeyword = word.toLowerCase();
         var url = "https://rupinwhitehatjr.github.io/dictionary/%22" + searchKeyword + "%22.json";
-        return fetch (url)
-        .then((data)=>{
+        return fetch (url).then((data)=>{
             if(data.status === 200) {
                 return data.json();
             }
