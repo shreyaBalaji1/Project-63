@@ -2,6 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            word: "",
+            definition: "",
+            lexicalCategory: ""
+        }
+    }
     
     getWord = (word) => {
         var searchKeyword = word.toLowerCase();
